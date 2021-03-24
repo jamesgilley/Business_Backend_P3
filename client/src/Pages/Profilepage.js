@@ -22,6 +22,10 @@ export default class Profile extends Component {
     return <div className="home">
       <Mnav />
       <Heading />
+      <h2> EMPLOYEE PROFILE DIRECTORY </h2>
+			<p>This is where you can lookup, change or add employee information </p>
+			<br></br>
+
       {this.state.data && <Table employees={this.state.data} />}
     </div>;
   }

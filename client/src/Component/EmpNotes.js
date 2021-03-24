@@ -1,13 +1,13 @@
 import React from "react";
-import AnnounceContainer from "../Component/AnnounceContainer";
+import EannounceContainer from "../Component/EannounceContainer";
 
 const EmpNotes = () => {
 	return (
 		<div class="pagetitle">
-			<h2>ANNOUNCEMENTS</h2>
+			<span class="rolenm">Current Company Updates: </span>
 			Notes and Reminders
 			<br></br>
-			<AnnounceContainer />
+			<EannounceContainer />
 		</div>
 	);
 };

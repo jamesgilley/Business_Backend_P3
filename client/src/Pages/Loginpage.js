@@ -3,6 +3,7 @@ import UserContext from "../Context/UserContext";
 import { useHistory } from "react-router-dom";
 import Axios from "axios";
 import { Link } from "react-router-dom";
+import pic2 from "../Img/toppic.png";
 
 
 const Login = () => {
@@ -50,25 +51,30 @@ const Login = () => {
 	}, [userData.user, history]);
 
 	return (
-		<div>
-			<span className="top">HUDDLE ROOM</span>
-			<p></p>
-			<span>
+		
+			<div class="container03">
+			<span className="top02">HUDDLE ROOM</span><br></br>
+			<span className="coname">An Employee Management Portal </span>
+			<br></br>
+		   <img class="img01"  src={pic2} alt="pic"></img>
+           <br></br>
 				Welcome! Please sign in or signup to view contents
-				<form id="form" onSubmit={submit}>
-					<label htmlFor="email">Email</label>
-					<input type="text" className="loginEmail" name="email" onChange={onChange} />
-					<br />
-					<label htmlFor="password">Password</label>
-					{/* NOTE: Change type to "password" when done testing, below */}
-					<input type="text" name="password" className="loginPassword" onChange={onChange} />
-					{/* NOTE: Change type to password when done testing, above */}
-					<br />
-					<input type="submit" value="Login" />
+				<br></br>
+				<div class="formcont">
+				<form id="form" onSubmit={submit}> <br></br>
+					<label htmlFor="email">Email: </label>
+					<input  type="text" className="loginEmail" name="email" class="input" onChange={onChange} />
+					<br /><p></p>
+					<label htmlFor="password">Password: </label><br></br>
+					<input type="password" name="password" className="loginPassword" input class="input" onChange={onChange} />
+					<br /><p></p>
+					<input class="btn02" type="submit" value="Login" />
 				</form>
-				<p></p>
+				</div>
+				<br></br>
 				Don't have an account? <Link to="/Signup"> Click here to Sign Up!</Link>
-			</span>
+			  <br></br>
+			 
 		</div>
 	);
 };

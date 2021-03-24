@@ -8,8 +8,8 @@ const MAnnouncements = () => {
 		<div class="pagetitle">
 			<Heading />
 			<Mnav />
-			<h2>ANNOUNCEMENTS</h2>
-			Here we will post new annoucements
+			<h2>ANNOUCEMENTS</h2>
+			Here you can post new annoucements/updates that employees can view
 			<br></br>
 			<AnnounceContainer />
 		</div>

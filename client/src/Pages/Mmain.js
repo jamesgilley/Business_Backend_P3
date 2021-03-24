@@ -2,8 +2,7 @@ import React, { useContext, useEffect } from "react";
 import Mnav from "./../Component/mnav";
 import UserContext from "../Context/UserContext";
 import { useHistory } from "react-router-dom";
-// import Heading from "../Component/heading";
-import pic from "../Img/imgmn.PNG";
+import pic5 from "../Img/mn.png";
 
 
 function MMain() {
@@ -28,11 +27,12 @@ function MMain() {
 					</span>{" "}
 				</h2>
 				<p>
+                 Welcome to your management portal. Review the links above to select a task
+                 <br></br>
 					{" "}
-					<img src={pic} alt="pic"></img>
+					<img src={pic5} alt="pic"></img>
 					<p></p>
-					Welcome to our employee portal. Review the links above to select a
-					task
+					
 				</p>
 				
 		

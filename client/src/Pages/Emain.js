@@ -1,44 +1,53 @@
 import React, { Component, useEffect, useContext } from "react";
-// import UserContext from "../Context/UserContext";
-// import { useHistory } from "react-router-dom";
+import UserContext from "../Context/UserContext";
+import { useHistory } from "react-router-dom";
 import Enav from "../Component/enav";
 import Heading from "../Component/heading";
-import Emputils from "../utils/emputils";
 import EmpNotes from "../Component/EmpNotes"
+import Profile from "../Component/empcover";
+import pic4 from "../Img/em.png";
 
 
 // This is the main page that a regular employee will see after logging in
  
-export default class Profile extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: null
-    };
-  }
+function Emain() {
+	const { userData } = useContext(UserContext);
+	const history = useHistory();
 
-  componentDidMount() {
-    fetch('https://randomuser.me/api/?results=1').then((response) => response.json()).then((data) => {
-      this.setState({ data });
-    });
-  }
+	useEffect(() => {
+		if (!userData.user) history.push("/");
+		
+	}, [userData.user, history]);
 
-	
-
-  render() {
-    return <div className="home">
+		return (
+			<div>
       <Enav />
       <Heading />
-			<p></p>
-			<p>
-				{" "}
-				Welcome to our employee portal. Review the links above to select a task
-			</p>
+      <h2>
+					
+					{" "}
+					Hello{" "}
+					<span className="" id="specialtxt">
+						{" "}
+						{userData.user ? userData.user.displayName : null}{" "}
+					</span>{" "}
+				</h2>
+				<p>
+          Welcome to your employee portal. Review the links above to select a task
+          <br></br>
+					{" "}
+					<img class="img-fluid" src={pic4} alt="pic"></img>
+					<p></p><p></p>
+				
+				</p>
+        <span class="rolenm"> Your Profile: </span> Please notify HR of any changes
 
-			<h1>EMPLOYEE PAGE</h1>
-      {this.state.data && <Emputils employees={this.state.data} />}
-			<br></br>
+      <Profile />
+			<p></p><p></p>
 			<EmpNotes />
-    </div>;
-  }
-}
+    </div>
+  
+	);
+	}
+
+export default Emain;

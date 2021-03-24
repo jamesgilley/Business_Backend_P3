@@ -8,8 +8,8 @@ function empPage() {
 		<div>
 			<Heading />
 			<Enav />
-			<h2>EMPLOYEE PAGE</h2>
-			<p>Content to be decided. Adding Calendar and request time off status </p>
+			<h2>EMPLOYEE SCHEDULE</h2>
+			<p>View the schedule for the entire month here. Contact your manager for any questions regarding schedule</p>
 
 			<div className="col-md-6">
 				<Calendar />

@@ -1,6 +1,8 @@
 # HuddleRoom
 
-Welcome to HuddleRoom, a vertically-integrated application for self-service employee management. Managers and employees alike can use this app to assign and view shifts, share messages, contact managers, and post announcements.
+Welcome to HuddleRoom, a vertically-integrated application for self-service employee management. Managers and employees alike can use this app to assign and view shifts, share messages, contact managers, and post announcements. Please visit us at our live site!
+
+[Live Deployment Link](http://huddleroom.herokuapp.com/)
 
 ### Features:
 
@@ -31,7 +33,7 @@ Welcome to HuddleRoom, a vertically-integrated application for self-service empl
 
 # Development Team
 
-- Jacky Tong (Scrum master, Wireframes)
+- Jacky Tong (Scrum master, Wireframes, Deployment, Presentation)
   - https://github.com/tongjac/
 - Soumya Singh (Backend functionality for employee profile, employee profile database and front end development for employee page)
   - https://github.com/sosingh1226
@@ -46,7 +48,7 @@ Welcome to HuddleRoom, a vertically-integrated application for self-service empl
 
 - `git clone` or `git pull` according to if you're starting your local from scratch or just updating.
 - In the base directory, run `npm install`. (It is helpful to temporarily disable antivirus since some team members have encountered it blocking crucial package files from downloading.)
-- `cd client/ & npm install` again in that sub-directory. There may be depreciation warnings but all dependencies are currently intact as of March 20, 2021.
+- `cd client/ & npm install` again in that sub-directory. There may be depreciation warnings but all dependencies are currently intact as of March 23, 2021.
 - `cd ..` to go back the base directory and run `npm build`. Wait for the build to complete, then run `npm run dev` to start the development client.
 - Open `http://localhost:3000` in browser with console or wait for it to launch automatically after building. Port 8080 is the "live" version and will not reflect changes yet.
 - `Ctrl + C` or `Commmand key + C` to end the development server.

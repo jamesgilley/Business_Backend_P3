@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import UserContext from "../Context/UserContext";
 import { useHistory, Link } from "react-router-dom";
 import Axios from "axios";
+import pic2 from "../Img/toppic2.png";
 
 const Signup = () => {
 	const { setUserData } = useContext(UserContext);
@@ -41,41 +42,54 @@ const Signup = () => {
 	};
 
 	return (
-		<div>
-			<span className="top">HUDDLE ROOM</span>
-			<p></p>
-			<span>
-				Welcome! Please sign in or signup to view contents
+	
+
+           <div class="container03">
+			<span className="top02">HUDDLE ROOM</span><br></br>
+			<span className="coname">An Employee Management Portal </span>
+			<br></br>
+		   <img class="img01"  src={pic2} alt="pic"></img>
+           <p></p>
+		   <h2>Create an Account </h2>
+				Welcome! Please input your information below to create an account
+				<br></br>
+				<div class="formcont">
 				<form onSubmit={submit}>
+				<label htmlFor="email">Email: </label>
 					<input
 						onChange={onChange}
 						type="text"
 						name="email"
 						placeholder="email"
-					></input>{" "}
+						class="input"
+					></input>{" "} <p></p>
+					<label htmlFor="displayName">Fullname:  </label>
 					<input
 						onChange={onChange}
 						type="text"
 						name="displayName"
 						placeholder="First & Last Name"
+						class="input"
 					></input>
-					<br></br>
-
-					{/* NOTE: Change type to "password" when done testing, below */}
+					<p></p>
+					<label htmlFor="password">Password:  </label>
 					<input
 						onChange={onChange}
-						type="text"
+						type="password"
 						name="password"
 						placeholder="password"
+						class="input"
 					></input>{" "}
+					<p></p>
+					<label htmlFor="passwordCheck">Re-enter Password: </label>
 					<input
 						onChange={onChange}
-						type="text"
+						type="password"
 						name="passwordCheck"
 						placeholder="passwordCheck"
+						class="input"
 					></input>
-					{/* NOTE: Change type to password when done testing, above */}
-
+                     <p></p>
 					<br />
 					<label>Select Job Title:</label>{" "}
 					<select name="role" onChange={onChange} placeholder="Job Title">
@@ -83,11 +97,12 @@ const Signup = () => {
 						<option value="Employee">Employee</option>
 						<option value="Manager">Manager</option>
 					</select>
-					<br></br>
-					<input type="submit"></input>
-				</form>
+					<p></p>
+					<input class="btn02" type="submit"></input>
+				</form></div>
+				<br></br>
 				Already have an account? <Link to="/login"> Click here to Login!</Link>
-			</span>
+			
 		</div>
 	);
 };
